@@ -3,48 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Protótipo interativo para teste e validação de experiência do usuário (UX).">
-    <title>Protótipo Interativo | Validação de UX</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <title>Protótipo do Projeto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-glow" aria-hidden="true"></div>
-    
-    <div class="page-wrapper">
-        <header class="header">
-            <span class="badge">Missão Usabilidade</span>
-            <h1>Protótipo Interativo</h1>
-            <p>Validação da experiência do usuário em tempo real.</p>
-        </header>
 
-        <main class="container">
-            <section class="card" aria-labelledby="card-title">
-                <h2 id="card-title">Testar Ação do Usuário</h2>
-                <p class="description">
-                    Clique no botão abaixo para simular uma interação e visualizar o retorno imediato do sistema.
-                </p>
-                
-                <div class="action-area">
-                    <button id="actionBtn" class="btn-primary" type="button">
-                        <span class="btn-text">Executar Ação</span>
-                    </button>
-                </div>
+    <header>
+        <h1>Protótipo do Grupo</h1>
+        <p>Testando ideias e aprendendo com os usuários</p>
+    </header>
 
-                <div id="feedbackMessage" class="feedback hidden" role="status" aria-live="polite">
-                    <div class="feedback-icon" aria-hidden="true">✓</div>
-                    <div class="feedback-text">
-                        <strong>Ação executada com sucesso!</strong>
-                        <span>O retorno visual imediato confirma a conclusão do processo.</span>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+    <main class="container">
+        <section class="card">
+            <h2>Navegação Rápida</h2>
+            <p>Clique no botão abaixo para interagir com o protótipo.</p>
+            <button id="btnAcao">Testar Funcionalidade</button>
+            <p id="mensagem" class="hidden">✨ Você interagiu com o protótipo com sucesso!</p>
+        </section>
+
+        <section class="card">
+            <h2>Área de Feedback</h2>
+            <p>Esta área está em testes para ser organizada de forma mais clara no futuro.</p>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
