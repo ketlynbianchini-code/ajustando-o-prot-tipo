@@ -3,39 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protótipo Interativo - Registro de Testes</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Protótipo interativo para teste e validação de experiência do usuário (UX).">
+    <title>Protótipo Interativo | Validação de UX</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-glow"></div>
+    <div class="background-glow" aria-hidden="true"></div>
     
-    <main class="container">
+    <div class="page-wrapper">
         <header class="header">
             <span class="badge">Missão Usabilidade</span>
             <h1>Protótipo Interativo</h1>
             <p>Validação da experiência do usuário em tempo real.</p>
         </header>
 
-        <section class="card">
-            <h2>Testar Ação do Usuário</h2>
-            <p class="description">Clique no botão abaixo para simular uma interação e visualizar o retorno do sistema.</p>
-            
-            <div class="action-area">
-                <button id="actionBtn" class="btn-primary">Executar Ação</button>
-            </div>
-
-            <div id="feedbackMessage" class="feedback hidden">
-                <div class="feedback-icon">✓</div>
-                <div class="feedback-text">
-                    <strong>Ação executada com sucesso!</strong>
-                    <span>O feedback visual imediato resolve a dúvida do usuário.</span>
+        <main class="container">
+            <section class="card" aria-labelledby="card-title">
+                <h2 id="card-title">Testar Ação do Usuário</h2>
+                <p class="description">
+                    Clique no botão abaixo para simular uma interação e visualizar o retorno imediato do sistema.
+                </p>
+                
+                <div class="action-area">
+                    <button id="actionBtn" class="btn-primary" type="button">
+                        <span class="btn-text">Executar Ação</span>
+                    </button>
                 </div>
-            </div>
-        </section>
-    </main>
+
+                <div id="feedbackMessage" class="feedback hidden" role="status" aria-live="polite">
+                    <div class="feedback-icon" aria-hidden="true">✓</div>
+                    <div class="feedback-text">
+                        <strong>Ação executada com sucesso!</strong>
+                        <span>O retorno visual imediato confirma a conclusão do processo.</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
